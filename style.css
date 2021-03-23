@@ -1,0 +1,120 @@
+/* clip-path: polygon(0 0, 67% 0, 100% 100%, 0% 100%); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cont {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont .hexa {
+    display: block;
+    position: relative;
+    width: 350px;
+    height: 400px;
+    transition: 0.5s;
+
+}
+
+
+.cont .hexa .shape{
+    position: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    clip-path: polygon(0 0, 67% 0, 100% 100%, 0% 100%); 
+    z-index: 1;
+}
+
+.cont .hexarev {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    margin: -100px;
+    transition: 0.5s;
+}
+
+.cont .hexarev .shape{
+    position: absolute;
+    top: 0;
+    left: 0 ;
+    width: 100%;
+    height: 100%;
+    background: black;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 32% 100%);
+}
+
+.cont .hexarev .shape img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+
+}
+.cont .hexa:hover{
+    transform: translateY(30px);
+}
+
+.cont .hexarev:hover{
+    transform: translateY(-30px);
+}
+
+.cont .hexarev .shape .phototext{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(45deg,lightblue,rgb(68, 68, 236, 0.3) );
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.cont .hexarev .shape .phototext:hover{
+    opacity: 1;
+}
+
+.cont .hexa .shape .phototext{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(45deg,lightblue,rgb(68, 68, 236, 0.3) );
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.cont .hexa .shape .phototext:hover{
+    opacity: 1;
+}
